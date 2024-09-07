@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank you</title>
+    <link rel="stylesheet" href="succcess.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsbarcode/3.11.3/JsBarcode.all.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Thank you for using <span style="background-color: white;color:darkblue;">Air Babai</span></h1>
+            <h3>Have a safe journey</h3>
+            <p>With regrads...Air Babai</p>
+            <span style="background-color: white;color:black;font-weight: 700;" id="code">AB01547<span class="uid" style="background-color: white;color:black;font-weight: 700;">0</span></span>
+        </div>
+        <div class="icon">
+            <h2>Booked succesfully</h2>
+            <svg id="barcode"></svg>
+        </div>
+    </div>
+    <script>
+        let x;
+        for (var i = 0; i < 29; i++) {
+         x=document.querySelector(".uid").innerHTML = i+Math.floor(Math.random() * 1000000)+Math.floor(Math.random() * 100);
+         JsBarcode("#barcode",x);
+        }
+    </script>
+</body>
+</html>
